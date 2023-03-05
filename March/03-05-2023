@@ -1,1 +1,46 @@
 
+Today I was able to figure out the various functions or roll for the following: HTML, CSS and JavaScript.
+HTML is a markup language and the building block of a web page. It provides the structure and layout of the web page.
+CSS is referred to as CASCADING STYLE SHEET. It allow you to control the presentation of a website.
+JavaScript programming language gives you the tools that you need to alter the behavior of different elements that are found on a web page. For short, JavaScript make the web page interactive.
+You can also use JavaScript to build calculator.
+
+From what I read stated that, if you want to improve your Front-End elements of your website you need to learned HTML, CSS, JavaScript, and Bootstrap.
+
+Some Back-End languages such as, Python, PHP, Ruby, and SQL are used to build a website depending on its purpose.
+Ruby and PHP are exceedingly popular among enterprenuer, startup, and web developer.
+Ruby is a scalable and fast programminig languag that can help you build an extensive website or program in just a short period of time.
+
+HTML Element and Tag
+HTML Element is used to create paragraphs, headings, lists, images, and links that make up a web page.
+HTML Element contain three parts: the opening tag, the content, and the closing tag.
+The opening tags tell the browser this is start of an HTML Element while the closing tags tell the browser this is the end of an HTML Element.
+The opening tags begin with a less than sign follow by a keyword and end with a greater then sign while the closing tags begin with a less than sign follow by forward slash and a keyword and end with a greater than sign.
+Tags are where HTML contents are written to be display by the browser.
+
+HTML Boilerplate
+HTML Boilerplate tell you how the document should be structure and how the browser should treat each sections.
+<!DOCTYPE html> tell the browser what version of HTML it should use to render the document.
+After declaring the DOCTYPE, you to provide an <html>. It is know as the root element of the document.
+The lang attribute specifies the language of the text context in that element.
+
+The <head> element is where we put important meta informations about our webpages.
+Note: In the <head>, we should not use element that displays content on the webpage.
+The <title></title> should be included in the <head>. The <title></title> doesn't display on the webpage instead it display in the tab of the browser.
+
+The final element needed to complete the HTML Boilerplate is the <body>. It is where the contents that are render on the webpage are written.
+
+Work with Text
+To create a paragraph in HTML you need a paragraph element. Paragraph element is defind by wrapping text content with a <p> tag.
+
+Headings are different from other html element. It can make the text larger and bold. It range from <h1> to <h6>.
+
+The <strong> element is use to make the text bold.
+
+The <em> element makes the text italic.
+
+We use indentation to make the level of nesting clear and readable for ourselves and other developers who will work with our HTML in the future. It is recommended to indent any child elements by two spaces.
+
+HTML comments are not visible to the browser; they allow us to provide some relevant information of the code that will give another developer a clear understanding of the code written.
+HTML comment is written like this: <!---->
+
