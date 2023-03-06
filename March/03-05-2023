@@ -44,3 +44,28 @@ We use indentation to make the level of nesting clear and readable for ourselves
 HTML comments are not visible to the browser; they allow us to provide some relevant information of the code that will give another developer a clear understanding of the code written.
 HTML comment is written like this: <!---->
 
+Lists
+To make a list in html we used Unordered <ul> and Ordered <ol> lists element with <li> element between them.
+Unordered list can be used to name this unorderly why Ordered list is used to name things in sequence from top to bottom. Unoredered list item begin with a bullet point while Ordered list item begin with 1.
+
+Unordered list is created like this: <ul><li>Item</li></ul>
+Oredered list is created like this: <ol><li>Apple</li><ol>
+
+Links and Images
+Links are used to help user navigate from one web page or website to another.
+Links are created using the anchor tag <a></a> with an attributes. Attributes consist of a name and a value.
+The href attribute follow by the value is used to create a link to a web page or website. example: <a href="about.html">About</a>
+There are two types of links and they are: relative and absolute links.
+
+Relative links are used to take you from one web page to another within the same website.
+Absolute Links are used to take you from one website to different website. An Absolute links contain a protocol and a domain name.
+
+Images are used to give a website good look. image are uploaded to a web page by using <img> element. The <img> element contain two attribute, the "src" that is use to loaded the image from it source file and the "alt". The "alt (alternate text)" is used to give description, the discription usually display when the image is unable to load due to a technical problem.
+
+Commit Messages
+From the Commit Messages article I learned that it is a good practice to commit messages while working on your project because it will serve as a reminder when changes are made.
+It will also guid and make your coding easy. This practice can also lead to future recommandation by other programmer who has gone through your commit history.
+It help you keep track of what changes were made and what problem you encounter while coding, with such practice it is easy to debug.
+
+Thanks for the materials. I went through it carefully with comprehension. While going through it I can across few things that I was ignorance to and they are, Relative and Absolute Links, The importance of Commit Messages, the strength of Ruby in programming, what I need to know as a Front-End developer and as a Back-End developer as will.
+
