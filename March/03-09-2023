@@ -1,1 +1,223 @@
+CSS and Flex-Box
+
+CSS Summary
+
+Before we begin let's start with the definition of CSS and the Functionality.
+
+Definition of CSS: CSS means Cascading Style Sheet. The word "Cascading" means top to bottom. 
+Funciton of CSS: CSS is used to beautify a the web page or website, it controls the presentation of the web page or website.
+
+CSS works inline with an html which provide the structure of the web page or website.
+CSS is used to beautify a web page or website in three ways: Inline, Embeded, and External.
+CSS work work direction with an html attributes like 'class' and 'id', it also style an html elements by calling the element(s).
+
+CSS Selectors
+
+Selectors simply refer to the HTML Elements to which CSS rules apply.
+There are five important selector of CSS that will briefly be discussion.
+Every selectors have two parts: Declaration and value.
+When a property is declared it should be follow by a colon(:) and the value follow by semi-colon(;)
+Note, declaration is the same as property. Ex. of CSS property is: font-family.
+The value is the action that should be perform when the property is declare. ex: font-family: Sans-Serif;
+
+Universal Selector = it select elements of any type.
+A Universal selector make changes to the entire web page with whatever style is apply to it (It begin with "*").
+The word Universal means all so if you declare a color and set the value to red all of the content on the web page will be affected.
+
+Type Selector or Element Selector = select all elements of the given element type. One good example of type selector are <div>, <header>, <section> <main>, etc.
+
+Class Selector = select all elements with the given class, which is just an attribute you place on an HTML element. ex. <section class="showcase"></section>
+A period immediately followed by the case-sensitive value of the class attribute. 
+Classes aren’t required to be unique, so you can use the same class on as many elements as you want.
+
+ID Selector = ID selectors are similar to class selectors.
+They select an element with the given ID, which is another attribute you place on an HTML element: ex. <section id="brand"></section>
+ID Selector are unique so the name given to an ID attribute can't be use more than one time within the same web page and it doesn't take whitespace.
+
+
+The difference between ID and Class Selectors is, ID selectors are unique it can not be duplicated, we use hash sign follow by the selector name while Class Selector can be duplicated because they are not unique and we use period sign follow by the selector name.
+
+Grouping Selectors = are used to cut down repetition. ex. <p class="p-section"></p>, <h1 class="h1-section"></h1>.
+If those elements have the same style apply to them then theres no need of calling their selector individually to style them, instead you can make use of the Grouping Selector.
+ex: .p-section, .h1-section{
+      color: blue;
+      }
+      
+   Chaining Selector = Another way to use selectors is to chain them as a list without any separation.
+   ex: <article>
+          <p class="content parag"></p>
+          <h3 class="content header3"><h3>
+      </article>
+      
+ We have two elements with the "content" class that have some sort of unique styles, but what if we only want to apply a separate rule to the element that also has "header3" as a second class?
+ Well, we could chain both the class selectors together in our CSS like this:
+      .content.header3 {
+          color: red;
+        }
+        
+What ".content.header3" does is it selects any element that has both the subsection and header classes. Notice how there isn’t 
+any space between the ".content and .header" class selectors. 
+This syntax basically works for chaining any combination of selectors, except for chaining more than one type selector.
+
+This can also be used to chain a class and an ID, as shown below:
+
+<div>
+  <div class="content header3">New comments</div>
+  <p class="content" id="next">I'm the next page.</p>
+</div>
+You can take the two elements above and combine them with the following:
+
+.content.header3 {
+  color: red;
+}
+
+.content#next {
+  color: blue;
+}
+
+Descendant Combinator
+Combinators allow us to combine multiple selectors differently than either grouping or chaining them, as they show a relationship between the selectors.
+It is represented in CSS by a single space between selectors.
+A descendant combinator will only cause elements that match the last selector to be selected 
+if they also have an ancestor (parent, grandparent, etc) that matches the previous selector.
+ex: <div class="wrap">
+    <div class="card-body">I'm the body</div>
+
+   </div>
+   <!--CSS Style-->
+   .wrap .card-body{
+        font-size: 20px;
+        }
+        
+Here are some most used CSS Properties: Color, Background-color, font-family, font-size, font-weight, text-align.
+
+Defference between color and background-color: color is used to give a particular color to a text while background-color is used to give a color at the back of the text.
+
+font-family is used to give a particular font to a text.
+
+font-size is used to increased or decreased the font.
+
+font-weigth is used to make the font bold and can also be used to reduce the boldness on certain text like text the are place between <h1></h1>.
+
+text-align is used to center a text horizontally (right, left and center).
+
+
+SPECIFICITY
+A CSS declaration that is more specific will take precedence over less specific ones.
+Specificity will only be taken into account when an element has multiple, conflicting declarations targeting it,
+sort of like a tie-breaker. An ID selector will always beat any number of class selectors,
+a class selector will always beat any number of type selectors, and a type selector will
+always beat any number of anything less specific than it.
+When no declaration has a selector with a higher specificity, a larger amount of a single selector 
+will beat a smaller amount of that same selector.
+
+INHERITANCE
+Inheritance refers to certain CSS properties that, when applied to an element, are inherited by that element’s descendants,
+even if we don’t explicitly write a rule for those descendants.
+The exception to this is when directly targeting an element, as this always beats inheritance.
+
+
+RULE ORDER
+The final factor, the end of the line, the tie-breaker of the tie-breaker.
+Let’s say that after every other factor has been taken into account, there are still multiple conflicting rules targeting an element. 
+How does the cascade determine which rule to apply?
+Whichever rule was the last defined is the winner. As it was early mentioned, CSS start its excution from top to bottom and it take into consideration the last rule applied.
+
+
+
+The Inspector
+To open up the inspector, you can right-click on any element of a webpage and click “Inspect” or press F12.
+The Inspector give you the previlige to quickly inspect you codes.
+
+Inspecting Elements
+In the Elements pane, you can see the entire HTML structure of your page. You can click on any of the elements in this pane to select that specific element.
+
+Testing Styles in the Inspector
+The Styles pane also allows you to edit styles directly in the browser. 
+You can click inside of any individual selector to add a new rule or click on an existing attribute or value to alter it.
+
+
+
+The Box Model
+The first important concept that you need to understand to be successful in CSS is the box model.
+
+Every single thing on a webpage is a rectangular box. These boxes can have other boxes in them and can sit alongside one another. 
+The ways in which the boxes can be manipulated are as follow:
+padding = increases the space between the border of a box and the content of the box.
+margin = increases the space between the borders of a box and the borders of adjacent boxes.
+border = adds space (even if it’s only a pixel or two) between the margin and the padding.
+
+Block vs Inline
+
+Block Element appears on top of each other, it always begin on a new line. ex: <p>, <h1>.
+Inline Elements are elements that don't start on a new line. They always appear on the same line next to each other. ex: <img>, <a>
+
+Divs and Spans
+
+divs and spans give no particular meaning to their content. They are just generic boxes that can contain anything.
+
+Div is a block-level element by default. It is commonly used as a container element to group other elements.
+Divs allow us to divide the page into different blocks and apply styling to those blocks.
+
+Span is an inline-level element by default.
+It can be used to group text content and inline HTML elements for styling and 
+should only be used when no other semantic HTML element is appropriate.
+
+
+Flexbox
+Flexbox is a way to arrange items into rows or columns. These items will flex (i.e. grow or shrink) based on some simple rules that you can define.
+flexbox is not just a single CSS property but a whole toolbox of properties that you can use to put things where you need them. Some of these properties
+belong on the flex container, while some go on the flex items. This is a simple yet important concept.
+
+The most confusing thing about flexbox is that it can work either horizontally or vertically, and some rules change 
+a bit depending on which direction you are working with.
+The default direction for a flex container is horizontal, or row, but you can change the direction to vertical, or column. 
+
+The Flex Shorthand
+The flex declaration is actually a shorthand for 3 properties that you can set on a flex item.
+These properties affect how flex items size themselves within their container.
+
+Note: Shorthand properties are CSS properties that let you set the values of multiple other CSS properties simultaneously. 
+      Using a shorthand property, you can write more concise (and often more readable) stylesheets, saving time and energy.
+      
+      flex is actually a shorthand for flex-grow, flex-shrink and flex-basis.
+      
+      Flex-Grow
+      flex-grow expects a single number as its value, and that number is used as the flex-item’s “growth factor”.
+      
+      Flex-Shrink
+      flex-shrink is similar to flex-grow, but sets the “shrink factor” of a flex item. 
+      flex-shrink only ends up being applied if the size of all flex items is larger than their parent container.
+      
+      An important implication to notice here is that when you specify flex-grow or flex-shrink, 
+      flex items do not necessarily respect your given values for width.
+      
+      Flex-Basis
+      flex-basis simply sets the initial size of a flex item, so any sort of flex-growing or flex-shrinking starts from that baseline size. 
+      The shorthand value defaults to flex-basis: 0%.
+
+Alignment
+You should be able to predict what happens if you put flex: 1 on the .item by now. Give it a shot before we move on!
+
+Adding flex: 1 to .item makes each of the items grow to fill the available space, but what if we wanted them to stay the same width,
+but distribute themselves differently inside the container? We can do this!
+
+justify-content aligns items across the main axis.
+
+To change the placement of items along the cross axis use align-items
+
+justify-content and align-items are based on the main and cross axis of your container, their behavior
+changes when you change the flex-direction of a flex-container.
+For example, when you change flex-direction to column, justify-content aligns vertically and
+align-items aligns horizontally. The most common behavior, however, is the default, i.e. justify-content aligns items horizontally (because the main axis defaults to horizontal), and align-items aligns them vertically
+
+Remove flex: 1 from .item and add justify-content: space-between to .container
+
+Gap
+One more very useful feature of flex is the gap property. Setting gap on a flex container simply 
+adds a specified space between flex items, very similar to adding a margin to the items themselves. 
+gap is a new property so it doesn’t show up in many resources yet, 
+but it works reliably in all modern browsers, so it is safe to use and very handy!
+
+
 
